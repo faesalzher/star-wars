@@ -1,8 +1,9 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient
 const app = express();
-app.set('view engine', 'ejs')
-app.listen(3000, function () {
+app.set('view engine', 'ejs');
+port = process.env.PORT || 3000;
+app.listen(port, function () {
     console.log('listening on 3000')
 });
 app.use(express.urlencoded({ extended: true }));
